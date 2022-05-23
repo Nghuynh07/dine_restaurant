@@ -1,0 +1,29 @@
+@use "base" as *;
+
+.btn {
+  margin: 3.5rem auto 0 auto;
+  padding: 1.5rem 3rem;
+  box-shadow: 0 0 0 0.1rem $white-color;
+  background-color: $primary-codGray-clr;
+  color: $white-color;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+
+  &--header {
+    padding: 2rem 5rem;
+  }
+  &--footer {
+    background-color: transparent;
+    margin: 0;
+    padding: 2rem 5rem;
+  }
+
+  @media (min-width: 900px) {
+    &--desktop {
+      margin: 5rem 0 0 0;
+    }
+  }
+}

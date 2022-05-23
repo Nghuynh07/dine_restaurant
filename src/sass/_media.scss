@@ -1,0 +1,229 @@
+@use "base" as *;
+
+@media (min-width: 375px) {
+  // ---------- HEADER STARTS
+  .header {
+    background-image: url(../images/homepage/hero-bg-tablet.jpg);
+    background-size: cover;
+    &__logo {
+      margin-top: 12rem;
+    }
+    &__contents {
+    }
+  }
+
+  // ---------- HEADER ENDS
+
+  // ---------- ABOUT STARTS
+
+  .about {
+    &__section:first-child {
+      margin-top: -8rem;
+    }
+    &__img {
+      img {
+      }
+    }
+  }
+  // ---------- ABOUT ENDS
+}
+
+@media (min-width: 600px) {
+  .header {
+    padding: 0 5rem;
+  }
+  .about {
+    margin-inline: 0;
+    padding: 0 8rem;
+  }
+  // ---------- HIGHLIGHTS STARTS
+  .highlights {
+    padding: 10rem 8rem;
+    &__line:first-child {
+      margin-bottom: -3.2rem;
+    }
+    &__line:last-child {
+      margin-top: -4.7rem;
+    }
+    &__content {
+      display: flex;
+      gap: 5rem;
+      p {
+        text-align: left;
+      }
+    }
+
+    &__section--tablet {
+      display: flex;
+      gap: 5rem;
+      p {
+        text-align: left;
+      }
+    }
+    &__img {
+      width: 50%;
+      grid-template-columns: repeat(2, 1fr);
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  // ---------- HIGHLIGHTS STARTS
+
+  // ---------- EVENTS STARTS
+  .events {
+    // padding: 7rem 6rem 4rem 6rem;
+    &__img {
+      padding: 0 6rem;
+      img {
+      }
+    }
+  }
+  // ---------- EVENTS ENDS
+
+  // ---------- RESERVATION STARTS
+  .reservation {
+    background: url(../images/homepage/ready-bg-tablet.jpg) center no-repeat;
+    background-size: cover;
+  }
+  // ---------- RESERVATION ENDS
+
+  // ---------- FOOTER STARTS
+
+  .footer {
+    .contact {
+      grid-template-columns: repeat(3, 1fr);
+      padding: 8rem 0 8rem 5rem;
+      &__logo {
+        grid-column: 1 / 2;
+        justify-self: start;
+        align-self: start;
+      }
+
+      &__location {
+        grid-column: 2 / -1;
+        justify-self: start;
+        text-align: left;
+      }
+
+      &__hours {
+        grid-column: 2 / -1;
+        justify-self: start;
+        text-align: left;
+      }
+    }
+  }
+  // ---------- FOOTER ENDS
+}
+
+@media (min-width: 700px) {
+  .events {
+    &__links {
+      flex-direction: row;
+      justify-content: space-between;
+      margin-inline: 2rem;
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .header {
+  }
+  .about {
+    &__section {
+    }
+  }
+  // ---------- HIGHLIGHTS STARTS
+  .highlights {
+    padding: 15rem 8rem;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    place-items: start;
+
+    svg {
+      margin-right: auto;
+    }
+    &__line {
+    }
+    &__content {
+      p {
+      }
+    }
+
+    &__section {
+    }
+
+    &__section--tablet {
+      p {
+      }
+    }
+    &__img {
+      img {
+      }
+    }
+  }
+  // ---------- HIGHLIGHTS STARTS
+
+  // ---------- EVENTS STARTS
+  .events {
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    &__img {
+      source {
+      }
+      img {
+      }
+    }
+
+    &__contents {
+      place-content: space-evenly;
+    }
+
+    &__links {
+      grid-column: 1/2;
+      grid-row: 2/3;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin: 0;
+    }
+    &__link {
+    }
+    &__section {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  // ---------- EVENTS ENDS
+
+  // ---------- RESERVATION STARTS
+  .reservation {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: space-between;
+    padding: 10rem;
+    background: url(../images/homepage/ready-bg-desktop.jpg) center no-repeat;
+    background-size: cover;
+  }
+  // ---------- RESERVATION ENDS
+
+  // ---------- FOOTER STARTS
+
+  .footer {
+    .contact {
+      justify-items: center;
+      padding: 10rem;
+      &__logo {
+      }
+
+      &__location {
+        grid-column: 2 / 3;
+      }
+
+      &__hours {
+        grid-column: 3 / 4;
+      }
+    }
+  }
+  // ---------- FOOTER ENDS
+}

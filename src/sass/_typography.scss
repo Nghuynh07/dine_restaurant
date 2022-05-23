@@ -1,0 +1,104 @@
+@use "base" as *;
+
+.header__heading {
+  font-size: clamp(3.2rem, 3vw + 0.77rem, 8rem);
+  color: $white-color;
+  font-weight: 300;
+  line-height: 1.2;
+  padding: 0 clamp(3rem, 3.5vw + 0.77rem, 7rem);
+  letter-spacing: 0.2rem;
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
+
+.paragraph__text {
+  font-size: clamp(1.6rem, 1.4vw, 2rem);
+  color: $white-color;
+  text-align: center;
+  line-height: 1.6;
+  letter-spacing: 0.05rem;
+
+  &--section {
+    color: $primary-codGray-clr;
+  }
+
+  &--highlights {
+    color: $white-color;
+    font-size: 1.6rem;
+  }
+
+  &--events {
+    color: $primary-codGray-clr;
+  }
+
+  @media (min-width: 600px) {
+    &--events {
+      padding: 0 12rem;
+    }
+  }
+  @media (min-width: 900px) {
+    &--events {
+      padding: 0 clamp(0rem, 5vw, 15rem) 0 0;
+      text-align: left;
+      margin-top: 1rem;
+    }
+    &--highlights {
+      text-align: left;
+    }
+  }
+}
+
+.section__heading {
+  font-size: clamp(3.2rem, 6.5vw, 4.8rem);
+  color: $primary-codGray-clr;
+  line-height: 1.2;
+  letter-spacing: 0.1rem;
+  &--highlights {
+    color: $white-color;
+    margin-bottom: 2rem;
+  }
+
+  &--footer {
+    color: $white-color;
+  }
+
+  @media (min-width: 900px) {
+    font-size: clamp(3.2rem, 2vw, 4.8rem);
+  }
+  &--highlights {
+    text-align: left;
+  }
+}
+
+.highlights__heading {
+  color: $white-color;
+  font-size: clamp(2rem, 3vw, 4.8rem);
+  margin-bottom: 1rem;
+  @media (min-width: 600px) {
+    text-align: left;
+  }
+  @media (min-width: 900px) {
+    &--desktop {
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+    }
+  }
+}
+
+.contact {
+  &__location {
+    display: grid;
+    row-gap: 1rem;
+  }
+
+  &__hours {
+    display: grid;
+    row-gap: 1rem;
+  }
+
+  &__text {
+    font-size: 1.4rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+  }
+}
