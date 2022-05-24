@@ -18,14 +18,14 @@
   position: relative;
 
   &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    max-width: 100%;
-    min-height: 28%;
-    background-color: green;
-    z-index: 100;
+    // content: "";
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // max-width: 100%;
+    // min-height: 28%;
+    // background-color: green;
+    // z-index: 100;
   }
 
   &__logo {

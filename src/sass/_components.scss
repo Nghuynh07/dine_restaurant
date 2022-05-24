@@ -11,7 +11,11 @@
   font-weight: 600;
   letter-spacing: 0.2rem;
   cursor: pointer;
-
+  transition: background-color 0.3s, color 0.3s;
+  &:hover {
+    background-color: $white-color;
+    color: $primary-codGray-clr;
+  }
   &--header {
     padding: 2rem 5rem;
   }
@@ -21,6 +25,14 @@
     padding: 2rem 5rem;
   }
 
+  &--desktop {
+    box-shadow: 0 0 0 0.1rem $primary-codGray-clr;
+  }
+  @media (min-width: 600px) {
+    &--header {
+      margin-bottom: -2rem;
+    }
+  }
   @media (min-width: 900px) {
     &--desktop {
       margin: 5rem 0 0 0;

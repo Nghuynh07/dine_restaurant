@@ -11,7 +11,7 @@ const Family = () => {
         a special meal with your loved ones. We’ll provide a memorable
         experience for all.
       </p>
-      <Button text='Book a table' className='btn btn--desktop' />
+      <Button text='Book a table' className='btn btn--desktop ' />
     </div>
   );
 };
