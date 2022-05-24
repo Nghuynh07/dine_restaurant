@@ -81,6 +81,20 @@
       filter: drop-shadow(0 3rem 2rem rgba(0 0 0 / 0.3));
     }
   }
+
+  &__img--desktop {
+    display: none;
+    source {
+      width: 100%;
+      object-fit: cover;
+      filter: drop-shadow(0 3rem 2rem rgba(0 0 0 / 0.3));
+    }
+    img {
+      width: 100%;
+      object-fit: cover;
+      filter: drop-shadow(0 3rem 2rem rgba(0 0 0 / 0.3));
+    }
+  }
 }
 // ---------- ABOUT ENDS
 
@@ -109,6 +123,7 @@
     row-gap: 4rem;
   }
   &__img {
+    width: 100%;
     img {
       width: 100%;
       object-fit: contain;

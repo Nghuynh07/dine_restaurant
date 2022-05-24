@@ -56,6 +56,7 @@
     &__section--tablet {
       display: flex;
       gap: 5rem;
+
       p {
         text-align: left;
       }
@@ -129,40 +130,59 @@
 
 @media (min-width: 900px) {
   .header {
+    padding: 0 10rem;
+    background-image: url(../images/homepage/hero-bg-desktop.jpg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    display: grid;
+    place-content: start;
+    align-content: center;
+    &__logo {
+      margin-right: auto;
+      margin-top: -10rem;
+    }
+    &__contents {
+      width: fit-content;
+      text-align: left;
+    }
   }
   .about {
-    &__section {
-    }
-  }
-  // ---------- HIGHLIGHTS STARTS
-  .highlights {
-    padding: 15rem 8rem;
-    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
-    place-items: start;
-
-    svg {
-      margin-right: auto;
-    }
-    &__line {
-    }
-    &__content {
-      p {
-      }
-    }
-
-    &__section {
-    }
-
-    &__section--tablet {
-      p {
+    margin-inline: 0;
+    &__contents {
+      display: grid;
+      row-gap: 1.5rem;
+      svg {
+        margin-bottom: 3rem;
       }
     }
     &__img {
-      img {
+      display: none;
+    }
+    &__img--desktop {
+      display: block;
+    }
+    &__section {
+      grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+      column-gap: 10rem;
+    }
+
+    &__section:first-child {
+      picture {
+        margin-top: 3rem;
+      }
+    }
+    &__section:last-child {
+      div {
+        grid-column: 1/2;
+        grid-row: 1/2;
+      }
+      picture {
+        grid-column: 2/3;
+        margin-bottom: -15rem;
       }
     }
   }
-  // ---------- HIGHLIGHTS STARTS
 
   // ---------- EVENTS STARTS
   .events {
@@ -226,4 +246,36 @@
     }
   }
   // ---------- FOOTER ENDS
+}
+
+@media (min-width: 1050px) {
+  // ---------- HIGHLIGHTS STARTS
+  .highlights {
+    padding: 15rem 8rem;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    place-items: start;
+
+    svg {
+      margin-right: auto;
+    }
+    &__line {
+    }
+    &__content {
+      p {
+      }
+    }
+
+    &__section {
+    }
+
+    &__section--tablet {
+      p {
+      }
+    }
+    &__img {
+      img {
+      }
+    }
+  }
+  // ---------- HIGHLIGHTS STARTS
 }

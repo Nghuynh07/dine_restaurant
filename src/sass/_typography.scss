@@ -10,6 +10,11 @@
   &::first-letter {
     text-transform: uppercase;
   }
+
+  @media (min-width: 900px) {
+    padding: 0;
+    max-width: 40%;
+  }
 }
 
 .paragraph__text {
@@ -46,6 +51,13 @@
     &--highlights {
       text-align: left;
     }
+    &--about {
+      text-align: left;
+    }
+    &--header {
+      width: 40%;
+      text-align: left;
+    }
   }
 }
 
@@ -69,6 +81,9 @@
   &--highlights {
     text-align: left;
   }
+  &--about {
+    text-align: left;
+  }
 }
 
 .highlights__heading {
@@ -80,7 +95,7 @@
   }
   @media (min-width: 900px) {
     &--desktop {
-      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-size: clamp(1.6rem, 1.5vw + 0.77rem, 2.2rem);
     }
   }
 }

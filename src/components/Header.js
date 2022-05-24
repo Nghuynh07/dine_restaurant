@@ -9,8 +9,10 @@ const Header = () => {
         <img src={logo} alt='Logo' />
       </div>
       <div className='header__contents'>
-        <h1 className='header__heading'>Exquisite dining since 1989</h1>
-        <p className='paragraph__text'>
+        <h1 className='header__heading header__heading--header'>
+          Exquisite dining since 1989
+        </h1>
+        <p className='paragraph__text paragraph__text--header'>
           Experience our seasonal menu in beautiful country surroundings. Eat
           the freshest produce from the comfort of our farmhouse.
         </p>
