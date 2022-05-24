@@ -53,6 +53,7 @@
     }
     &--about {
       text-align: left;
+      padding-right: 5rem;
     }
     &--header {
       width: 40%;
@@ -84,6 +85,12 @@
   }
   &--about {
     text-align: left;
+  }
+  // @media (min-width: 600px) {
+  //   text-align: center;
+  // }
+  @media (min-width: 374px) {
+    text-align: center;
   }
 }
 
