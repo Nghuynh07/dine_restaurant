@@ -1,6 +1,10 @@
 import Button from "./Button";
-
+import { useNavigate } from "react-router-dom";
 const Social = () => {
+  const navigate = useNavigate();
+  const onClick = () => {
+    navigate("/book");
+  };
   return (
     <div className='events__section social'>
       <h1 className='section__heading section__heading--events'>
@@ -11,7 +15,11 @@ const Social = () => {
         than happy to cater for big parties. We’ll work with you to make your
         event a hit with everyone.
       </p>
-      <Button text='Book a table' className='btn btn-desktop' />
+      <Button
+        onClick={onClick}
+        text='Book a table'
+        className='btn btn-desktop'
+      />
     </div>
   );
 };

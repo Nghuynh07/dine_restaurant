@@ -9,14 +9,15 @@
   display: grid;
   place-content: center;
   row-gap: 3rem;
-  background-image: url(../images/homepage/hero-bg-mobile.jpg);
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: contain;
   text-align: center;
   padding: 0 2rem;
   position: relative;
-
+  @include backgroundImageStyles(
+    top,
+    no-repeat,
+    contain,
+    url(../images/homepage/hero-bg-mobile.jpg)
+  );
   &::before {
     // content: "";
     // position: absolute;
@@ -71,28 +72,20 @@
   &__img {
     width: 100%;
     source {
-      width: 100%;
-      object-fit: cover;
-      filter: drop-shadow(0 3rem 2rem rgba(0 0 0 / 0.3));
+      @include imgStyles;
     }
     img {
-      width: 100%;
-      object-fit: cover;
-      filter: drop-shadow(0 3rem 2rem rgba(0 0 0 / 0.3));
+      @include imgStyles;
     }
   }
 
   &__img--desktop {
     display: none;
     source {
-      width: 100%;
-      object-fit: cover;
-      filter: drop-shadow(0 3rem 2rem rgba(0 0 0 / 0.3));
+      @include imgStyles;
     }
     img {
-      width: 100%;
-      object-fit: cover;
-      filter: drop-shadow(0 3rem 2rem rgba(0 0 0 / 0.3));
+      @include imgStyles;
     }
   }
 }
@@ -145,10 +138,7 @@
     source {
     }
     img {
-      display: block;
-      width: 100%;
-      object-fit: contain;
-      filter: drop-shadow(0 3rem 2rem rgba(0 0 0 / 0.3));
+      @include imgStyles;
     }
   }
 
@@ -188,8 +178,12 @@
   text-align: center;
   background-color: rgba(0 0 0 / 0.3);
   padding: 8rem 5rem 8rem 5rem;
-  background: url(../images/homepage/ready-bg-mobile.jpg) center no-repeat;
-  background-size: cover;
+  @include backgroundImageStyles(
+    center,
+    no-repeat,
+    cover,
+    url(../images/homepage/ready-bg-mobile.jpg)
+  );
 }
 // ---------- RESERVATION ENDS
 
@@ -205,3 +199,34 @@
     padding: 8rem 0;
   }
 }
+
+// BOOK STARTS
+.bookHeader {
+  max-width: 100%;
+  min-height: 100vh;
+  padding-top: 6rem;
+  @include backgroundImageStyles(
+    top,
+    no-repeat,
+    contain,
+    url(../images/booking/hero-bg-mobile.jpg)
+  );
+  &__wrapper {
+    margin-inline: 2rem;
+    display: grid;
+    justify-items: center;
+    row-gap: 4rem;
+  }
+  &__contents {
+    display: grid;
+    justify-items: center;
+  }
+  &__logo {
+  }
+  &__main {
+    display: grid;
+    row-gap: 1.5rem;
+  }
+}
+
+// BOOK ENDS

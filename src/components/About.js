@@ -10,11 +10,11 @@ const About = () => {
     <section className='about'>
       <div className='about__section'>
         <picture className='about__img'>
-          <source srcset={enjoyableTablet} media='(min-width:600px)' />
+          <source srcSet={enjoyableTablet} media='(min-width:600px)' />
           <img src={enjoyable} alt='Mountain with sheep and river' />
         </picture>
         <picture className='about__img--desktop'>
-          <source srcset={enjoyableDesktop} media='(min-width:900px)' />
+          <source srcSet={enjoyableDesktop} media='(min-width:900px)' />
           <img src={enjoyableDesktop} alt='Mountain with sheep and river' />
         </picture>
         <div className='about__contents'>
@@ -35,11 +35,11 @@ const About = () => {
       </div>
       <div className='about__section'>
         <picture className='about__img'>
-          <source srcset={locallyTablet} media='(min-width:600px)' />
+          <source srcSet={locallyTablet} media='(min-width:600px)' />
           <img src={locally} alt='Mountain with sheep and river' />
         </picture>
         <picture className='about__img--desktop'>
-          <source srcset={locallyDesktop} media='(min-width:900px)' />
+          <source srcSet={locallyDesktop} media='(min-width:900px)' />
           <img src={locallyDesktop} alt='Mountain with sheep and river' />
         </picture>
         <div className='about__contents'>

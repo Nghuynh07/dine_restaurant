@@ -1,6 +1,6 @@
 import React from "react";
 import Contact from "./Contact";
-import Reservation from "./Reservation";
+// import Reservation from "./Reservation";
 
 const Footer = () => {
   return (

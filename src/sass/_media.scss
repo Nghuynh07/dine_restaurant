@@ -28,6 +28,56 @@
   // ---------- ABOUT ENDS
 }
 
+@media (min-width: 500px) {
+  .bookHeader {
+    @include backgroundImageStyles(
+      top,
+      no-repeat,
+      contain,
+      url(../images/booking/hero-bg-tablet.jpg)
+    );
+
+    &__wrapper {
+      margin-inline: 4rem;
+    }
+    &__contents {
+      padding: 0 4rem;
+    }
+    &__logo {
+      justify-self: start;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .bookHeader {
+    @include backgroundImageStyles(
+      top,
+      no-repeat,
+      contain,
+      url(../images/booking/hero-bg-desktop.jpg)
+    );
+    &__wrapper {
+    }
+    &__logo {
+    }
+    &__main {
+      margin-left: -4rem;
+      h1 {
+        text-align: left;
+      }
+      p {
+        text-align: left;
+      }
+    }
+    &__contents {
+      justify-content: start;
+      width: 50%;
+      margin-right: auto;
+    }
+  }
+}
+
 @media (min-width: 600px) {
   .header {
     padding: 0 6rem;
@@ -270,6 +320,23 @@
     }
   }
   // ---------- FOOTER ENDS
+
+  // BookHeader Starts
+  .bookHeader {
+    &__wrapper {
+    }
+    &__logo {
+    }
+    &__main {
+    }
+    &__contents {
+      justify-self: start;
+      h1 {
+        text-align: left;
+      }
+    }
+  }
+  // BookHeader Ends
 }
 
 @media (min-width: 1050px) {
@@ -281,24 +348,6 @@
 
     svg {
       margin-right: auto;
-    }
-    &__line {
-    }
-    &__content {
-      p {
-      }
-    }
-
-    &__section {
-    }
-
-    &__section--tablet {
-      p {
-      }
-    }
-    &__img {
-      img {
-      }
     }
   }
   // ---------- HIGHLIGHTS STARTS

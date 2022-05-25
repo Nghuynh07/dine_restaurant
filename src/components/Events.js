@@ -1,13 +1,10 @@
-import specialEvents from "../images/homepage/special-events-mobile.jpg";
+// import specialEvents from "../images/homepage/special-events-mobile.jpg";
 import familyGathering from "../images/homepage/family-gathering-mobile.jpg";
-import familyGatheringTablet from "../images/homepage/family-gathering-tablet.jpg";
+// import familyGatheringTablet from "../images/homepage/family-gathering-tablet.jpg";
 import familyGatheringDesktop from "../images/homepage/family-gathering-desktop.jpg";
-import socialEvents from "../images/homepage/social-events-mobile.jpg";
-import { Routes, Route, Link } from "react-router-dom";
-import Family from "./Family";
-import Special from "./Special";
-import Social from "./Social";
-import Image from "./Image";
+// import socialEvents from "../images/homepage/social-events-mobile.jpg";
+import { Link, Outlet } from "react-router-dom";
+
 const Events = () => {
   return (
     <section className='events'>
@@ -42,11 +39,7 @@ const Events = () => {
             Social Events
           </Link>
         </div>
-        <Routes>
-          <Route path='family' element={<Family />} />
-          <Route path='special' element={<Special />} />
-          <Route path='social' element={<Social />} />
-        </Routes>
+        <Outlet />
       </div>
     </section>
   );

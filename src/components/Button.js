@@ -1,10 +1,9 @@
 import React from "react";
-
-const Button = ({ text, className, goTo }) => {
+const Button = ({ text, className, goTo, onClick }) => {
   return (
-    <a href={goTo} className={className}>
+    <button className={className} onClick={onClick}>
       {text}
-    </a>
+    </button>
   );
 };
 

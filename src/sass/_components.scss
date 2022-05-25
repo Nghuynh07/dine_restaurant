@@ -28,6 +28,12 @@
   &--desktop {
     box-shadow: 0 0 0 0.1rem $primary-codGray-clr;
   }
+  @media (min-width: 500px) {
+    &--bookHeader {
+      display: none;
+    }
+  }
+
   @media (min-width: 600px) {
     &--header {
       margin-bottom: -2rem;

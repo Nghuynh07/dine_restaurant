@@ -43,6 +43,9 @@
     }
   }
   @media (min-width: 900px) {
+    // &--bookHeader {
+    //   text-align: left;
+    // }
     &--events {
       padding: 0 clamp(0rem, 5vw, 15rem) 0 0;
       text-align: left;
@@ -77,6 +80,15 @@
     color: $white-color;
   }
 
+  &--bookHeader {
+    color: $white-color;
+    font-weight: 300;
+    font-size: clamp(3.2rem, 5.6vw, 8rem);
+
+    @media (min-width: 768px) {
+    }
+  }
+
   @media (min-width: 900px) {
     font-size: clamp(3.2rem, 2vw, 4.8rem);
   }
@@ -86,9 +98,6 @@
   &--about {
     text-align: left;
   }
-  // @media (min-width: 600px) {
-  //   text-align: center;
-  // }
   @media (min-width: 374px) {
     text-align: center;
   }

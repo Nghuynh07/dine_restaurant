@@ -1,7 +1,12 @@
 import logo from "../images/logo.svg";
 import Button from "./Button";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
+  const onClick = () => {
+    navigate("/book");
+  };
   return (
     <header className='header'>
       {/* <div className='header__bg'></div> */}
@@ -17,7 +22,11 @@ const Header = () => {
           the freshest produce from the comfort of our farmhouse.
         </p>
       </div>
-      <Button className='btn btn--header' text='book a table' />
+      <Button
+        onClick={onClick}
+        className='btn btn--header'
+        text='book a table'
+      />
     </header>
   );
 };

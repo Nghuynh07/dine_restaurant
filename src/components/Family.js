@@ -1,6 +1,11 @@
 import Button from "./Button";
-
+import { useNavigate } from "react-router-dom";
 const Family = () => {
+  const navigate = useNavigate();
+  console.log(navigate);
+  const onClick = () => {
+    navigate("/book");
+  };
   return (
     <div className='events__section family'>
       <h1 className='section__heading section__heading--events '>
@@ -11,7 +16,11 @@ const Family = () => {
         a special meal with your loved ones. We’ll provide a memorable
         experience for all.
       </p>
-      <Button text='Book a table' className='btn btn--desktop ' />
+      <Button
+        onClick={onClick}
+        text='Book a table'
+        className='btn btn--desktop '
+      />
     </div>
   );
 };

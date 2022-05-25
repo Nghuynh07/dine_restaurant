@@ -7,6 +7,20 @@ $secondary-shuttle-clr: #5c6779;
 $white-color: #fff;
 
 $layout-breakpoint-small: 375px;
+// 375 600 700 900 1050
+@mixin imgStyles {
+  display: block;
+  width: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 3rem 2rem rgba(0 0 0 / 0.3));
+}
+
+@mixin backgroundImageStyles($position, $repeat, $size, $url) {
+  background-image: $url;
+  background-position: $position;
+  background-repeat: $repeat;
+  background-size: $size;
+}
 
 *,
 *::before,
