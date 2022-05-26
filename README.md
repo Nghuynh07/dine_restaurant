@@ -1,22 +1,28 @@
-# Frontend Mentor - Dine Website Challenge
+# Frontend Mentor - Dine Website Challenge solution
 
-![Design preview for the Dine Website Challenge coding challenge](./preview.jpg)
+This is a solution to the [Dine Website Challenge challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/dine-restaurant-website-yAt7Vvxt7). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for purchasing this premium Frontend Mentor coding challenge.
+- [Frontend Mentor - Dine Website Challenge solution](#frontend-mentor---dine-website-challenge-solution)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+    - [What I learned](#what-i-learned)
+    - [Continued development](#continued-development)
+  - [Author](#author)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects. These premium challenges are perfect portfolio pieces, so please feel free to use what you create in your portfolio to show others.
+**Note: Delete this note and update the table of contents based on what sections you keep.**
 
-**To do this challenge, you need a solid understanding of HTML and CSS and a basic understanding of JavaScript.**
+## Overview
 
-## The challenge
+### The challenge
 
-Your challenge is to build out this multi-page website and get it looking as close to the design as possible.
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-Your users should be able to:
+Users should be able to:
 
 - View the optimal layout for each page depending on their device's screen size
 - See hover states for all interactive elements throughout the site
@@ -26,68 +32,57 @@ Your users should be able to:
   - The `Email Address` is not formatted correctly should show "Please use a valid email address"
   - Any of the `Pick a date` or `Pick a time` fields are empty should show "This field is incomplete"
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+### Screenshot
 
-## Where to find everything
+![Desktop Version](./solution_images/desktop.png)
+![Tablet Version](./solution_images/tablet.png)
+![Mobile Version](./solution_images/mobile.png)
 
-Your task is to build out the project to the design file provided. We provide both Sketch and Figma versions of the design, so you can choose which tool you prefer to use. You can download the design file on the platform. **Please be sure not to share them with anyone else.** The design download comes with a `README.md` file as well to help you get set up.
+![Desktop Version](./solution_images/desktop__form.png)
+![Tablet Version](./solution_images/tablet__form.png)
+![Mobile Version](./solution_images/mobile__form.png)
 
-All the required assets for this project are in the `/assets` folder. The assets are already exported for the correct screen size and optimized. Some images are reusable at multiple screen sizes. So if you don't see an image in a specific folder, it will typically be in another folder for that page.
+### Links
 
-The design system in the design file will give you more information about the various colors, fonts, and styles used in this project.
+- Solution URL: [Add solution URL here](https://github.com/Nghuynh07/dine_restaurant)
+- Live Site URL: [Add live site URL here](https://starlit-sherbet-d852c9.netlify.app/)
 
-## Building your project
+## My process
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+- Started out with some planning for the project: css classes, grouping elements together for layout/styling purposes and write JSX markups.
+- Set up folder structures: how many pages are needed? How many components? How and where each component will be nested?
+- NPM Install SASS and setting up basic file structures.
+- Write SCSS/ Styling and layout include media queries. This took the longest. This is my firs time working with so many images. I think I know why there are so many images. I believe it is intended for lazy loading image. I did not however, but I intended to use the Intersection Observer API to lazy load images. I have worked with this before on my portfolio.
+- This is a mobile approach so I started out with 374px mobile device and slowly add complexity for larger screen size.
+- I work from top to bottom through the project. One section after another; however, I did jump around to ensure other parts did not break as I work on media queries.
+- Lastly was working on the form. Originally I wanted to use the 'date' and 'time' type input;however, I quickly realized that styling 'date' and 'time' only available in chrome, so I had to restart and take another approach. I didn't have to, but I want the project to look as close as possible to the original. It is my first attempt with this project, but it is worth the time.
+- Each input is attached to a customHook. For example: name, email input would attach to its own hook. The final result have 7 different hooks for each input. I am absolutely sure there is a better way to approach this with just one hook. It might involve passing in argument as a function into the hook and import from an external file. I couldn't quite figure that out, but I think it might be a good attempt in making the code DRY. Each hook also contains, onFocus, onBlur isBlur and isFocus and error if user did not input the values.
+- For this project, I also attempted using picture element with srcSet. I am not sure how good it plays out in the end as I did not attempt lazy loading. But as I was thinking about the intersection observer API, it might be better if element img were used instead of picture. For CSS to toggle hide/show image display: block or display: none might be good.
+- I am not entirely happy with how it came out; but I learned quite a bit and I talk about it below. It was definitely a good challenge. It stretched my skill as a front-end developer and I know where I am at with my layout skills. The project suffers a little after tablet layout. I hope with enough practices/projects I can improve this aspect as a front-end developer.
 
-1. Separate the `starter-code` from the rest of this project and rename it to something meaningful for you. Initialize the codebase as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/). **⚠️ IMPORTANT ⚠️: There are already a couple of `.gitignore` files in this project. Please do not remove them or change the content of the files. If you create a brand new project, please use the `.gitignore` files provided in your new codebase. This is to avoid the accidental upload of the design files to GitHub. With these premium challenges, please be sure not to share the design files in your GitHub repo. Thanks!**
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+### Built with
 
-## Deploying your project
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- [React](https://reactjs.org/) - JS library
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+### What I learned
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+- Initial planning of a project is so crucial. Although I spent a good amount of time planning for the project: folder structure, setting upp css classes for JSP markups, components/pages that the project need, as I work through the project, I constantly having to go back and add a few addition div here and there to group elements together.
+- This is my first time trying mobile approach, its a little different than what I normally approach which is desktop first, but I see the benefit of mobile approach. Mobile first is a lot easier to approach than desktop, as it adds lowest level of complexity then gradually increases it as the screen size gets larger. Desktop first is removing the complexity using max-width. I have worked with both and after project, I believe mobile first is the winner for me.
+- After writing SCSS for a while now, I realize nesting media queries inside element might be easier than having a separate media partial. Its just easier on the eye and for organizing. Not entirely sure if this might be true for large scale project but with just 2 pages like this project, I can see myself getting lost in media query partial and having to scroll to find the @media.
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+### Continued development
 
-## Create a custom `README.md`
+Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+## Author
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
-
-## Submitting your solution
-
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
-
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
-
-**⚠️ IMPORTANT ⚠️: With these premium challenges, please be sure not to upload the design files to GitHub when you're submitting to the platform and sharing it around. If you've created a brand new project, the easiest way to do that is to copy across the `.gitignore` provided in this starter project.**
-
-## Sharing your solution
-
-There are multiple places you can share your solution:
-
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
-
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
-
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
-
-## Got feedback for us?
-
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
-
-**Have fun building!** 🚀
+- Website - [Huynh Nguyen](https://huynhtn.com/)
+- Frontend Mentor - [@Nghuynh07](https://www.frontendmentor.io/profile/Nghuynh07)
+- Twitter - [@huyniewin](https://twitter.com/huyniewin)
