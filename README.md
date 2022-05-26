@@ -35,11 +35,15 @@ Users should be able to:
 ### Screenshot
 
 ![Desktop Version](./src/solution_images/desktop.png)
+
 ![Tablet Version](./src/solution_images/tablet.png)
+
 ![Mobile Version](./src/solution_images/mobile.png)
 
 ![Desktop Form Version](./src/solution_images/desktop__form.png)
+
 ![Tablet Form Version](./src/solution_images/tablet__form.png)
+
 ![Mobile Form Version](./src/solution_images/mobile__form.png)
 
 ### Links
