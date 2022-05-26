@@ -5,37 +5,39 @@
 // ---------- HEADER STARTS
 .header {
   width: 100%;
-  min-height: 100vh;
-  display: grid;
-  place-content: center;
-  row-gap: 3rem;
   text-align: center;
-  padding: 0 2rem;
   position: relative;
+  padding: 20rem 0 10rem 0;
   @include backgroundImageStyles(
     top,
     no-repeat,
-    contain,
+    cover,
     url(../images/homepage/hero-bg-mobile.jpg)
   );
   &::before {
-    // content: "";
-    // position: absolute;
-    // top: 0;
-    // left: 0;
-    // max-width: 100%;
-    // min-height: 28%;
-    // background-color: green;
-    // z-index: 100;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 28%;
+    background-color: rgba(lightgray, 0.02);
+    z-index: 100;
+  }
+
+  &__container {
+    display: grid;
+    row-gap: 3rem;
+    padding: 0 2rem;
   }
 
   &__logo {
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
 
   &__contents {
     display: grid;
-    row-gap: 2rem;
+    gap: 2rem;
   }
 }
 
@@ -52,21 +54,30 @@
 
 .about {
   margin-inline: 2rem;
-  display: grid;
-  row-gap: 6rem;
-  &__section:first-child {
-    margin-top: -12rem;
+  padding-bottom: 10rem;
+  text-align: center;
+  &__container {
+    display: grid;
+    row-gap: 9rem;
   }
 
-  &__section:last-child {
-    margin-bottom: 10rem;
+  &__section:first-child {
+    margin-top: -8rem;
   }
 
   &__section {
     display: grid;
-    place-items: center;
-    text-align: center;
     row-gap: 4rem;
+  }
+
+  &__contents {
+    display: grid;
+    gap: 3rem;
+    padding: 0 1rem;
+
+    svg {
+      margin: auto;
+    }
   }
 
   &__img {
@@ -94,26 +105,42 @@
 // ---------- HIGHLIGHTS STARTS
 .highlights {
   background-color: $primary-codGray-clr;
-  padding: 10rem 2rem;
-  display: grid;
-  row-gap: 3rem;
-  column-gap: 3rem;
+  text-align: center;
+  padding: 10rem 0;
+  &__container {
+    padding: 0 2rem;
+    display: grid;
+    gap: 8rem;
+  }
+
   &__line {
     width: 100%;
     height: 0.1rem;
     background-color: rgba(255 255 255 / 0.2);
   }
 
+  &__line:first-child {
+    margin-top: 5rem;
+    margin-bottom: -2rem;
+  }
+  &__line:last-child {
+    margin-bottom: 3rem;
+  }
+  &__infos {
+    padding: 0 0.5rem;
+  }
   &__content {
     display: grid;
-    place-items: center;
+    row-gap: 5rem;
   }
 
   &__section {
     display: grid;
-    place-items: center;
-    text-align: center;
-    row-gap: 4rem;
+    row-gap: 5rem;
+
+    svg {
+      margin: auto;
+    }
   }
   &__img {
     width: 100%;
@@ -128,44 +155,43 @@
 
 // ---------- EVENTS STARTS
 .events {
+  padding: 7rem 0 10rem 0;
   margin-inline: 2rem;
-  padding: 7rem 0 4rem 0;
-  display: grid;
-  row-gap: 5rem;
-  margin-bottom: 5rem;
+  text-align: center;
+  &__container {
+    display: grid;
+    row-gap: 4rem;
+  }
 
   &__img {
-    source {
+    &--desktop {
+      display: none;
     }
     img {
       @include imgStyles;
     }
   }
-
+  &__infos {
+    display: grid;
+    row-gap: 1.5rem;
+  }
   &__contents {
     display: grid;
     row-gap: 3rem;
   }
 
   &__links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    & > * {
-      margin: 1rem 0;
-    }
+    display: grid;
+    row-gap: 2.5rem;
   }
   &__link {
-    font-size: clamp(1.2rem, 1vw, 1.7rem);
+    font-size: 1.7rem;
     font-weight: 600;
     color: $secondary-shuttle-clr;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
   }
   &__section {
-    display: grid;
-    place-items: center;
-    text-align: center;
   }
 }
 // ---------- EVENTS ENDS
@@ -173,11 +199,11 @@
 // ---------- RESERVATION STARTS
 .reservation {
   display: grid;
-  row-gap: 2rem;
-  place-items: center;
+  justify-items: center;
+  row-gap: 3rem;
   text-align: center;
   background-color: rgba(0 0 0 / 0.3);
-  padding: 8rem 5rem 8rem 5rem;
+  padding: 8rem 6rem;
   @include backgroundImageStyles(
     center,
     no-repeat,
@@ -193,22 +219,21 @@
     background-color: $primary-codGray-clr;
     color: $white-color;
     display: grid;
-    place-items: center;
     text-align: center;
-    row-gap: 3rem;
+    row-gap: 5rem;
     padding: 8rem 0;
   }
 }
 
 // BOOK STARTS
 .bookHeader {
-  max-width: 100%;
-  min-height: 100vh;
+  // max-width: 100%;
+  min-height: 60vh;
   padding-top: 6rem;
   @include backgroundImageStyles(
     top,
     no-repeat,
-    contain,
+    cover,
     url(../images/booking/hero-bg-mobile.jpg)
   );
   &__wrapper {
@@ -226,6 +251,94 @@
   &__main {
     display: grid;
     row-gap: 1.5rem;
+  }
+}
+
+.form__container {
+  // padding: 4rem;
+  margin-inline: 2rem;
+  margin-top: -10rem;
+  padding-bottom: 10rem;
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: $white-color;
+    filter: drop-shadow(0 1rem 2rem rgba(0 0 0 / 0.2));
+    padding: 4rem 3rem;
+
+    &__input {
+      width: 100%;
+      border-bottom: 0.1rem solid rgba(0 0 0 / 0.2);
+      padding-bottom: 1.5rem;
+      padding-left: 2rem;
+      font-size: 2rem;
+      &::placeholder {
+        font-size: 2rem;
+      }
+    }
+
+    &__label {
+      font-size: 2rem;
+    }
+    // DATE STYLES STARTS
+    input[type="date"] {
+      width: 100%;
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
+
+    input[type="date"]::-webkit-datetime-edit-fields-wrapper {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    input[type="date"]::-webkit-datetime-edit-month-field {
+      padding-bottom: 1rem;
+      border-bottom: 0.1rem solid rgba(0 0 0 / 0.2);
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    input[type="date"]::-webkit-datetime-edit-day-field {
+      padding-bottom: 1rem;
+      border-bottom: 0.1rem solid rgba(0 0 0 / 0.2);
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    input[type="date"]::-webkit-datetime-edit-year-field {
+      padding-bottom: 1rem;
+      border-bottom: 0.1rem solid rgba(0 0 0 / 0.2);
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    input[type="date"]::-webkit-inner-spin-button {
+    }
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      display: none;
+    }
+    // DATE STYLES ENDS
+
+    // TIME STYLES STARTS
+
+    // TIME STYLES ENDS
+    input[type="time"] {
+      width: 100%;
+    }
+
+    &__infos {
+    }
+
+    &__cta {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 0.1rem solid rgba(0 0 0 / 0.2);
+      padding-bottom: 1.5rem;
+    }
   }
 }
 

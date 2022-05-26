@@ -11,9 +11,9 @@
     text-transform: uppercase;
   }
 
-  @media (min-width: 900px) {
-    padding: 0;
-    max-width: 40%;
+  @media (min-width: 800px) {
+    min-width: 60%;
+    font-size: clamp(3.2rem, 4vw, 8rem);
   }
 }
 
@@ -37,29 +37,13 @@
     color: $primary-codGray-clr;
   }
 
-  @media (min-width: 600px) {
+  @media (min-width: 800px) {
     &--events {
-      padding: 0 12rem;
+      padding: 0 10rem;
     }
-  }
-  @media (min-width: 900px) {
-    // &--bookHeader {
-    //   text-align: left;
-    // }
-    &--events {
-      padding: 0 clamp(0rem, 5vw, 15rem) 0 0;
-      text-align: left;
-      margin-top: 1rem;
-    }
-    &--highlights {
-      text-align: left;
-    }
-    &--about {
-      text-align: left;
-      padding-right: 5rem;
-    }
+
     &--header {
-      width: 40%;
+      width: 55%;
       text-align: left;
     }
   }
@@ -93,9 +77,6 @@
     font-size: clamp(3.2rem, 2vw, 4.8rem);
   }
   &--highlights {
-    text-align: left;
-  }
-  &--about {
     text-align: left;
   }
   @media (min-width: 374px) {
@@ -132,5 +113,18 @@
     font-size: 1.4rem;
     letter-spacing: 0.2rem;
     text-transform: uppercase;
+  }
+}
+
+.form {
+  p {
+    visibility: hidden;
+  }
+
+  &__label {
+  }
+
+  &__error {
+    font-size: 2rem;
   }
 }

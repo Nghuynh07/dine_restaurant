@@ -3,15 +3,21 @@
 @media (min-width: 375px) {
   // ---------- HEADER STARTS
   .header {
-    background-image: url(../images/homepage/hero-bg-tablet.jpg);
-    background-size: cover;
+    @include backgroundImageStyles(
+      top,
+      no-repeat,
+      cover,
+      url(../images/homepage/hero-bg-tablet.jpg)
+    );
+    &::before {
+      height: 35%;
+    }
     &__logo {
-      margin-top: 12rem;
+      margin-top: 10rem;
     }
     &__contents {
     }
   }
-
   // ---------- HEADER ENDS
 
   // ---------- ABOUT STARTS
@@ -19,10 +25,6 @@
   .about {
     &__section:first-child {
       margin-top: -8rem;
-    }
-    &__img {
-      img {
-      }
     }
   }
   // ---------- ABOUT ENDS
@@ -33,7 +35,7 @@
     @include backgroundImageStyles(
       top,
       no-repeat,
-      contain,
+      cover,
       url(../images/booking/hero-bg-tablet.jpg)
     );
 
@@ -47,6 +49,9 @@
       justify-self: start;
     }
   }
+  .form__container {
+    margin-top: -15rem;
+  }
 }
 
 @media (min-width: 769px) {
@@ -54,13 +59,9 @@
     @include backgroundImageStyles(
       top,
       no-repeat,
-      contain,
+      cover,
       url(../images/booking/hero-bg-desktop.jpg)
     );
-    &__wrapper {
-    }
-    &__logo {
-    }
     &__main {
       margin-left: -4rem;
       h1 {
@@ -74,61 +75,91 @@
       justify-content: start;
       width: 50%;
       margin-right: auto;
+      margin-top: 10rem;
+    }
+  }
+  .form__container {
+    width: 50%;
+    margin-left: auto;
+    margin-top: -20%;
+  }
+
+  .events {
+    &__img {
+      &--tablet {
+        display: none;
+      }
+      &--desktop {
+        display: block;
+      }
     }
   }
 }
 
+@media (min-width: 700px) {
+  // ---------- EVENTS STARTS
+  .events {
+    &__links {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  // ---------- EVENTS ENDS
+}
+
 @media (min-width: 600px) {
   .header {
-    padding: 0 6rem;
     &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 37%;
-      background-color: rgba(lightgray, 0.05);
-      z-index: 100;
+      height: 42%;
     }
-    &__logo {
+    &__container {
+      padding: 4rem 10rem 0 10rem;
     }
   }
   .about {
-    margin-inline: 0;
-    padding: 0 8rem;
+    margin-inline: 8rem;
+    &__contents {
+      padding: 0 5rem;
+    }
   }
   // ---------- HIGHLIGHTS STARTS
   .highlights {
     padding: 10rem 8rem;
-    &__line:first-child {
-      margin-bottom: -3.2rem;
-    }
-    &__line:last-child {
-      margin-top: -4.7rem;
-    }
     &__content {
       display: flex;
+      align-items: center;
       gap: 5rem;
       p {
         text-align: left;
       }
     }
-
     &__section--tablet {
       display: flex;
       gap: 5rem;
-
+      align-items: center;
       p {
         text-align: left;
       }
     }
     &__img {
-      width: 50%;
+      width: 100%;
       grid-template-columns: repeat(2, 1fr);
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        top: 50%;
+        right: -3.5rem;
+        width: 3.5rem;
+        height: 0.1rem;
+        transform: translateY(-50%);
+        background-color: $primary-beaver-clr;
+        z-index: 100;
+      }
       img {
         width: 100%;
         object-fit: cover;
+        aspect-ratio: 1/1;
       }
     }
   }
@@ -136,19 +167,23 @@
 
   // ---------- EVENTS STARTS
   .events {
-    // padding: 7rem 6rem 4rem 6rem;
     &__img {
       padding: 0 6rem;
-      img {
-      }
+    }
+    &__infos {
+      padding: 0 6rem;
     }
   }
   // ---------- EVENTS ENDS
 
   // ---------- RESERVATION STARTS
   .reservation {
-    background: url(../images/homepage/ready-bg-tablet.jpg) center no-repeat;
-    background-size: cover;
+    @include backgroundImageStyles(
+      center,
+      no-repeat,
+      cover,
+      url(../images/homepage/ready-bg-tablet.jpg)
+    );
   }
   // ---------- RESERVATION ENDS
 
@@ -180,56 +215,62 @@
   // ---------- FOOTER ENDS
 }
 
-@media (min-width: 700px) {
-  .events {
-    &__links {
-      flex-direction: row;
-      justify-content: space-between;
-      margin-inline: 2rem;
+@media (min-width: 800px) {
+  .header {
+    @include backgroundImageStyles(
+      top,
+      no-repeat,
+      cover,
+      url(../images/homepage/hero-bg-desktop.jpg)
+    );
+    &::before {
+      height: 100%;
+      left: 0;
+      width: 60%;
+      background-color: rgba(lightgray, 0.05);
+    }
+
+    &__logo {
+      align-self: start;
+      justify-self: start;
+      margin: -10rem 0 0 0;
+    }
+
+    h1 {
+      text-align: left;
+      padding: 0;
+    }
+    &__container {
+      padding: 0 10rem;
     }
   }
 }
 
 @media (min-width: 900px) {
-  .header {
-    padding: 0 12rem;
-    background-image: url(../images/homepage/hero-bg-desktop.jpg);
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
-    display: grid;
-    place-content: start;
-    align-content: center;
-    position: relative;
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 75%;
-      height: 100%;
-      background-color: rgba(lightgray, 0.05);
-    }
-    &__logo {
-      margin-right: auto;
-      margin-top: -10rem;
-    }
-    &__contents {
-      width: fit-content;
-      text-align: left;
-    }
+  .form__container {
+    padding-right: 6rem;
   }
+
   .about {
-    margin-inline: 0;
+    &__container {
+      row-gap: 0;
+    }
     &__contents {
-      display: grid;
-      row-gap: 1.5rem;
-      padding-left: 4rem;
+      row-gap: 3rem;
+      padding: 0;
+      place-content: center;
+
       svg {
-        margin-bottom: 3rem;
+        margin-left: 0;
       }
     }
 
+    h2 {
+      text-align: left;
+    }
+    p {
+      text-align: left;
+    }
     &__img {
       display: none;
     }
@@ -261,31 +302,8 @@
   // ---------- EVENTS STARTS
   .events {
     grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
-    &__img {
-      source {
-      }
-      img {
-      }
-    }
-
     &__contents {
       place-content: space-evenly;
-    }
-
-    &__links {
-      grid-column: 1/2;
-      grid-row: 2/3;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
-      margin: 0;
-    }
-    &__link {
-    }
-    &__section {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
     }
   }
 
@@ -338,17 +356,18 @@
   }
   // BookHeader Ends
 }
-
-@media (min-width: 1050px) {
-  // ---------- HIGHLIGHTS STARTS
+@media (min-width: 1000px) {
   .highlights {
-    padding: 15rem 8rem;
-    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
-    place-items: start;
-
-    svg {
-      margin-right: auto;
+    &__container {
+      grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
     }
   }
-  // ---------- HIGHLIGHTS STARTS
+}
+
+@media (min-width: 1200px) {
+  .about {
+    &__contents {
+      padding: 5rem;
+    }
+  }
 }
