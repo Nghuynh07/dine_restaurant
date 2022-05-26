@@ -14,7 +14,7 @@ const Events = () => {
   return (
     <section className='events'>
       <div className='events__container'>
-        {location.pathname === "/family" && (
+        {location.pathname === "/" && (
           <picture className='events__img'>
             <source
               className='events__img--tablet'
@@ -62,7 +62,7 @@ const Events = () => {
 
         <div className='events__contents'>
           <div className='events__links'>
-            <Link to='family' className='events__link'>
+            <Link to='/' className='events__link'>
               Family Gathering
             </Link>
             <Link to='special' className='events__link'>

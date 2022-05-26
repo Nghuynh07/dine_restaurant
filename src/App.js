@@ -10,7 +10,7 @@ function App() {
     <div className='container'>
       <Routes>
         <Route path='/' element={<Home />}>
-          <Route path='family' element={<Family />} />
+          <Route path='/' element={<Family />} />
           <Route path='social' element={<Social />} />
           <Route path='special' element={<Special />} />
         </Route>

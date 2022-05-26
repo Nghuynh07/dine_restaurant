@@ -15,8 +15,6 @@
     &__logo {
       margin-top: 10rem;
     }
-    &__contents {
-    }
   }
   // ---------- HEADER ENDS
 
@@ -50,7 +48,7 @@
     }
   }
   .form__container {
-    margin-top: -15rem;
+    margin-inline: 8rem;
   }
 }
 
@@ -73,15 +71,9 @@
     }
     &__contents {
       justify-content: start;
-      width: 50%;
+      width: 60%;
       margin-right: auto;
-      margin-top: 10rem;
     }
-  }
-  .form__container {
-    width: 50%;
-    margin-left: auto;
-    margin-top: -20%;
   }
 
   .events {
@@ -91,6 +83,25 @@
       }
       &--desktop {
         display: block;
+      }
+    }
+  }
+  .form__container {
+    margin-top: -15rem;
+
+    .form {
+      &__datetime {
+        display: flex;
+        gap: 10rem;
+      }
+      &__dateInfos {
+        width: 25%;
+      }
+      &__dateInputs {
+      }
+      &__dateinput {
+      }
+      &__dateInputLabel {
       }
     }
   }
@@ -213,6 +224,9 @@
     }
   }
   // ---------- FOOTER ENDS
+
+  // FORM STARTS
+  // BOOK HEADER ENDS
 }
 
 @media (min-width: 800px) {
@@ -225,7 +239,7 @@
     );
     &::before {
       height: 100%;
-      left: 0;
+      left: 40%;
       width: 60%;
       background-color: rgba(lightgray, 0.05);
     }
@@ -247,10 +261,6 @@
 }
 
 @media (min-width: 900px) {
-  .form__container {
-    padding-right: 6rem;
-  }
-
   .about {
     &__container {
       row-gap: 0;
@@ -314,8 +324,12 @@
     grid-template-columns: repeat(2, 1fr);
     justify-items: space-between;
     padding: 10rem;
-    background: url(../images/homepage/ready-bg-desktop.jpg) center no-repeat;
-    background-size: cover;
+    @include backgroundImageStyles(
+      center,
+      no-repeat,
+      cover,
+      url(../images/homepage/ready-bg-desktop.jpg)
+    );
   }
   // ---------- RESERVATION ENDS
 
@@ -325,9 +339,6 @@
     .contact {
       justify-items: center;
       padding: 10rem;
-      &__logo {
-      }
-
       &__location {
         grid-column: 2 / 3;
       }
@@ -341,12 +352,6 @@
 
   // BookHeader Starts
   .bookHeader {
-    &__wrapper {
-    }
-    &__logo {
-    }
-    &__main {
-    }
     &__contents {
       justify-self: start;
       h1 {
@@ -357,6 +362,27 @@
   // BookHeader Ends
 }
 @media (min-width: 1000px) {
+  .bookHeader {
+    &__main {
+      h1 {
+        text-align: left;
+      }
+      p {
+        text-align: left;
+      }
+    }
+    &__contents {
+      justify-content: start;
+      width: 40%;
+      margin-right: auto;
+      margin-top: 10rem;
+    }
+  }
+  .form__container {
+    max-width: 50%;
+    margin-left: auto;
+    margin-top: -25%;
+  }
   .highlights {
     &__container {
       grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));

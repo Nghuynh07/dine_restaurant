@@ -16,17 +16,19 @@
     background-color: $white-color;
     color: $primary-codGray-clr;
   }
+
   &--header {
     padding: 2rem 5rem;
     margin-bottom: 5rem;
   }
-
   &--footer {
     background-color: transparent;
     margin: 0;
     padding: 2rem 5rem;
   }
-
+  &--bookHeader {
+    margin-bottom: 15rem;
+  }
   &--desktop {
     box-shadow: 0 0 0 0.1rem $primary-codGray-clr;
   }
