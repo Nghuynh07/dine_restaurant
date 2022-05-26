@@ -397,3 +397,9 @@
     }
   }
 }
+
+@media (min-width: 1441px) {
+  .container {
+    padding: 0 calc((100% - 1440px) / 2);
+  }
+}

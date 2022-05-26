@@ -5,6 +5,7 @@ import { useMonthHook } from "../hooks/monthHook";
 import { useDayHook } from "../hooks/dayHook";
 import { useYearHook } from "../hooks/yearHook";
 import { useHourHook } from "../hooks/hourHook";
+import { useMinHook } from "../hooks/minHook";
 
 const Form = () => {
   const [count, setCount] = useState(0);
@@ -18,6 +19,9 @@ const Form = () => {
   const { onDayFocus, onDayBlur, onDayChange, dayError } = useDayHook();
   const { onYearFocus, onYearBlur, onYearChange, yearError } = useYearHook();
   const { onHourFocus, onHourBlur, onHourChange, hourError } = useHourHook();
+
+  const { onMinFocus, onMinBlur, onMinChange, minError } = useMinHook();
+
   const increment = () => {
     setCount((pre) => pre + 1);
   };
@@ -103,7 +107,7 @@ const Form = () => {
         <div className='form__datetime'>
           <div className='form__dateInfos'>
             <p className='form__label'>Pick a time</p>
-            <p className='form__error'>{hourError}</p>
+            <p className='form__error'>{hourError || minError}</p>
           </div>
           <div className='form__dateInputs'>
             <label htmlFor='hour'>
@@ -129,6 +133,9 @@ const Form = () => {
                 required
                 placeholder='09'
                 className='form__dateinput'
+                onChange={onMinChange}
+                onFocus={onMinFocus}
+                onBlur={onMinBlur}
               />
             </label>
             <select className='form__dateInputs'>
